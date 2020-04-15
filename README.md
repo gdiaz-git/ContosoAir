@@ -1,5 +1,6 @@
 # This project is retired, archived, and no longer supported. You are welcome to continue to use and fork the repository.
 
+[![Build Status](https://dev.azure.com/gdiaz0969/GitHub%20Integration%20with%20Azure%20Pipelines/_apis/build/status/gdiaz-git.ContosoAir?branchName=master)](https://dev.azure.com/gdiaz0969/GitHub%20Integration%20with%20Azure%20Pipelines/_build/latest?definitionId=6&branchName=master)      
 
 # Microsoft.Github CI Demo
 
