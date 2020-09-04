@@ -12,11 +12,13 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install --production'
-  - script: 'npm test'
+  - script: |
+      npm install
+      npm test
     displayName: 'Run unit tests'
     continueOnError: true
   - task: PublishTestResults@2
-    displayName: 'Publish The Test Results'
+    displayName: 'Publish Test Results'
     condition: succeededOrFailed()
     inputs:
       testResultsFiles: $(System.DefaultWorkingDirectory)/test-report.xml
@@ -33,7 +35,7 @@ steps:
       rootFolderOrFile: $(Build.SourcesDirectory)
       includeRootFolder: false
   - task: CopyFiles@2
-    displayName: 'Copy the ARM templates'
+    displayName: 'Copy ARM templates'
     inputs:
       SourceFolder: deployment
       Contents: '*.json'
